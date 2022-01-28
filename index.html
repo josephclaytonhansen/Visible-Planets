@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Visible Planets</title>
+      <meta charset="UTF-8" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Mukta&family=Bitter:wght@400;500;600;700&display=swap"
+         rel="stylesheet">
+      <link rel="stylesheet" href="src/style.css" />
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+   </head>
+   <body>
+      <div class = "flex">
+      <div class = "layer"></div>
+      <div class = "planet-container" id = "container">
+         <div class = "planet-card card-over" onclick = "planetSummary('Mercury_(planet)', this)">
+            <div class = "planet mercury off" id = "mercury"></div>
+            <div class = "card-bottom">
+               <p class = "card-text">Mercury</p>
+               <div class = "indic off" id = "mercury_indic"></div>
+            </div>
+         </div>
+         <div class = "planet-card card-over" onclick = "planetSummary('Venus', this)">
+            <div class = "planet venus off" id = "venus"></div>
+            <div class = "card-bottom">
+               <p class = "card-text">Venus</p>
+               <div class = "indic off" id = "venus_indic"></div>
+            </div>
+         </div>
+         <div class = "planet-card card-over" onclick = "planetSummary('Moon', this)">
+            <div class = "card-top">
+               <div class = "planet moon off" id = "moon"></div>
+            </div>
+            <div class = "card-bottom">
+               <p class = "card-text">Moon</p>
+               <div class = "indic off" id = "moon_indic"></div>
+            </div>
+         </div>
+         <div class = "planet-card card-over" onclick = "planetSummary('Mars', this)">
+            <div class = "planet mars off" id = "mars"></div>
+            <div class = "card-bottom">
+               <p class = "card-text">Mars</p>
+               <div class = "indic off" id = "mars_indic"></div>
+            </div>
+         </div>
+         <div class = "planet-card card-over" onclick = "planetSummary('Jupiter', this)">
+            <div class = "card-top">
+               <div class = "planet jupiter off" id = "jupiter"></div>
+               <div class = "jupiter-over invisible" id = "jo"></div>
+            </div>
+            <div class = "card-bottom">
+               <p class = "card-text">Jupiter</p>
+               <div class = "indic off" id = "jupiter_indic"></div>
+            </div>
+         </div>
+         <div class = "planet-card card-over" onclick = "planetSummary('Saturn', this)">
+            <div class = "card-top rings-rotate">
+               <div class = "rings-l off" id = "rl">
+                  <div class = "rings-over-l off" id = "rol"></div>
+               </div>
+               <div class = "planet saturn off" id = "saturn"></div>
+               <div class = "rings-l off" id = "rr">
+                  <div class = "rings-over-r off" id = "ror"></div>
+               </div>
+            </div>
+            <div class = "card-bottom">
+               <p class = "card-text">Saturn</p>
+               <div class = "indic off" id = "saturn_indic"></div>
+            </div>
+         </div>
+         <div class = "planet-card card-over" onclick = "planetSummary('Uranus', this)">
+            <div class = "planet uranus off" id = "uranus"></div>
+            <div class = "card-bottom">
+               <p class = "card-text">Uranus</p>
+               <div class = "indic off" id = "uranus_indic"></div>
+            </div>
+         </div>
+         <div class = "planet-card card-over" onclick = "planetSummary('Neptune', this)">
+            <div class = "planet neptune off" id = "neptune"></div>
+            <div class = "card-bottom">
+               <p class = "card-text">Neptune</p>
+               <div class = "indic off" id = "neptune_indic"></div>
+            </div>
+         </div>
+      </div>
+      <div class = "details-container" id = "details">
+         <p class = "details-text" id = "details-text"></p>
+      </div>
+      <div class = "close invisible" onclick = "doClose()" id = "close">
+         <p class = "close-x"><strong>X</strong></p>
+      </div>
+      <div class = "top" id = "top">
+         <div class = "header-text">
+            <h1>VISIBLE PLANETS</h1>
+            <p class = "subtitle"><em>What could you see in the sky right now?</em></p>
+         </div>
+         <div class = "spacer-120"></div>
+         <form onsubmit="return changeLoc()">
+            <input name = "place" class = "entry-field" id = "place" value = "Rexburg, Idaho" placeholder = "Enter your location">
+            <button type = "submit" class = "entry-button">GO</button>
+         </form>
+      </div>
+      <div class = "footer" id = "footer">
+         <p class = "footer-text">Click any planet to learn more about it (Courtesy of <a href = "https://wikipedia.org">Wikipedia</a>)</p>
+         <div class = "flex-spacer"></div>
+         <p class = "footer-text"><a onclick = "footerText()">About this project</a></p>
+         <div class = "flex-spacer"></div>
+         <p class = "footer-text"><a href = "https://github.com/josephclaytonhansen">github.com/josephclaytonhansen</a></p>
+      </div>
+      <script src="src/script.js"></script>
+   </body>
+</html>

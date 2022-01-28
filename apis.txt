@@ -1,0 +1,3 @@
+Visible Planets : https://visible-planets-api.herokuapp.com/
+Open Cage Data : https://opencagedata.com/
+WikiMedia API : https://en.wikipedia.org/w/api.php?
